@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { api } from "../api/api";
 import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { AuthContext } from "../contexts/authContext";
-import "../components/style/login-style.css"
+import "../style/login-style.css"
 export function Login() {
     const [login, setLogin] = useState({
         email: "",
