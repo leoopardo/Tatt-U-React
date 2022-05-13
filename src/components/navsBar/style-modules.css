@@ -1,0 +1,24 @@
+.simpleNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.63);
+    backdrop-filter: blur(10px);
+    height: 89px;
+    width: 414px;
+    top: 0px;
+}
+h1 {
+    position: absolute;
+    height: 52px;
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 69px;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    mix-blend-mode: screen;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25)
+}
