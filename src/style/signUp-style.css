@@ -1,0 +1,46 @@
+.labelYouAre,
+.fileSelect,
+.signUpLabelCountry,
+.signUpLabelEmail{
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+.role,
+.signUpInputCity,
+.signUpInputCountry,
+.signUpInputEmail,
+.signUpInputState{
+    background: rgba(255, 255, 255, 0.87);
+    mix-blend-mode: screen;
+    backdrop-filter: blur(3.69159px);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.role{
+    width: 100px;
+    height: 30px;
+}
+.pictureInput{
+    width: 120px;
+}
+.signUpInputEmail,
+.signUpInputCountry{
+    width: 214px;
+    height: 20px;
+}
+
+.signUpInputCity{
+    width: 158px;
+    height: 20px;
+}
+.signUpInputState{
+    width: 38px;
+    height: 20px
+}
