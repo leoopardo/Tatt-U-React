@@ -22,3 +22,12 @@ h1 {
     mix-blend-mode: screen;
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25)
 }
+.profilePic{
+    position: absolute;
+    width: 82px;
+    height: 78px;
+    left: 17px;
+    top: 5px;
+    border-radius: 100%;
+    box-shadow: inset 1px 1px 5px 5px rgba(0, 0, 0, 0.47);
+}

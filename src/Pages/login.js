@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { api } from "../api/api";
@@ -32,7 +32,7 @@ export function Login() {
     }
     return ( 
         <div className="loginPage">
-        <NavBarSimple>Tatt U</NavBarSimple>
+        <NavBarSimple><h1>Tatt U</h1></NavBarSimple>
         <div className="formBox">
             <form onSubmit={handleSubmit}>
                 <div>

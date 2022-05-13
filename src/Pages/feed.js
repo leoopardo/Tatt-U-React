@@ -1,12 +1,13 @@
-import { useEffect, useState, useContext } from "react";
-import {api} from "../api/api"
+import {useContext } from "react";
 import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { AuthContext } from "../contexts/authContext";
 
 export function Feed() {
+    const { loggedInUser } = useContext(AuthContext)
+    console.log(loggedInUser)
     return ( 
         <>
-        <NavBarSimple>Tatt U</NavBarSimple>
+        <NavBarSimple><img src={loggedInUser.user.profilePicture} alt="profile_pic" className="profilePic"></img></NavBarSimple>
         </>
      );
 }
