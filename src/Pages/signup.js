@@ -2,8 +2,10 @@ import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../style/signUp-style.css"
+import { api } from "../api/api";
 
 export function Signup() {
+    const navigate = useNavigate()
     const [signUp, setSignUp] = useState({
         name: "",
         email: "",
@@ -15,15 +17,45 @@ export function Signup() {
         contact: "",
         role: ""
     })
+    const [img, setImg] = useState("");
+
     function handleChange(e){
         setSignUp({...signUp, [e.target.name]: e.target.value})
         console.log(signUp)
+    }
+
+    function handleImage(e){
+        setImg(e.target.files[0])
+        console.log(img)
+    }
+    async function handleUpload(){
+        try{
+            const uploadData = new FormData();
+            uploadData.append("picture", img);
+
+            const response = await api.post("/img/upload-image", uploadData);
+
+            return response.data.url
+        } catch(err){
+            console.log(err)
+        };
+    }
+    async function handleSubmit(e){
+        e.preventDefault();
+        try{
+            const imgURL = await handleUpload();
+            await api.post("/user/signup", {...signUp, profilePicture: imgURL})
+            
+            navigate("/")
+        } catch(err){
+            console.log(err)
+        }
     }
     return ( 
         <div className="loginPage">
             <NavBarSimple><h1>Sign up</h1></NavBarSimple>
             <div className="formBox">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="role" className="labelYouAre">You Are:</label>
                     </div>
@@ -37,7 +69,9 @@ export function Signup() {
                     <input 
                     name="profilePicture"
                     type="file"
+                    id="formImg"
                     className="pictureInput"
+                    onChange={handleImage}
                     />
                     <div>
                         <label htmlFor="email" className="signUpLabelEmail">You name</label>
@@ -103,6 +137,7 @@ export function Signup() {
                     value={signUp.password}
                     onChange={handleChange}
                     />
+                    <button type="submit">Create account</button>
                 </form>
             </div>
         </div>
