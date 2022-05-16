@@ -50,6 +50,7 @@ export function Signup() {
         } catch(err){
             console.log(err)
         }
+        navigate("/feed")
     }
     return ( 
         <div className="loginPage">
