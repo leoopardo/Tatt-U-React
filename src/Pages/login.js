@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { api } from "../api/api";
 import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { AuthContext } from "../contexts/authContext";
-import "../components/style/login-style.css"
+import "../style/login-style.css"
 export function Login() {
     const [login, setLogin] = useState({
         email: "",
@@ -12,6 +12,7 @@ export function Login() {
     });
     const navigate = useNavigate()
     const {setLoggedInUser} = useContext(AuthContext)
+    const { loggedInUser } = useContext(AuthContext)
 
     function handleChange(e){
         setLogin({...login, [e.target.name]: e.target.value})
@@ -24,8 +25,13 @@ export function Login() {
            setLoggedInUser({...response.data});
 
            localStorage.setItem("loggedInUser", JSON.stringify(response.data));
-           
-            navigate("/feed")
+        
+           if(loggedInUser.user.role === "ARTIST"){
+               navigate("/artist");
+           } else{
+               navigate("/feed")
+            } 
+            
         } catch (error) {
             console.log(error);
         }
