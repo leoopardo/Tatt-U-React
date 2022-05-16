@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const apiURLs = {
-    development: "http://localhost:4000",
-    production: "API DEPLOYADA",
+    development: "https://tatt-u.herokuapp.com",
+    production: "https://tatt-u.herokuapp.com",
 };
 
 const api = axios.create({ baseURL: apiURLs[process.env.NODE_ENV]});

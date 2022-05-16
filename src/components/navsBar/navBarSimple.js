@@ -1,6 +1,6 @@
 import "./style-modules.css"
 export function NavBarSimple(props) {
-    return ( 
+    return (         
         <nav className="simpleNav">
             {props.children}   
         </nav>
