@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { AuthContext } from "../contexts/authContext";
-import "../components/style/login-style.css"
 import { DropDownMenu } from "../components/DropDownMenu/DropDownMenu";
 import "../style/feed-style.css"
 

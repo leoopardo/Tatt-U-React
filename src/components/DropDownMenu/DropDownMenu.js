@@ -1,4 +1,4 @@
-import "../style/DropDownMenu-style.css";
+import "../../style/DropDownMenu-style.css";
 import navicon from "../../images/navicon.png";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
