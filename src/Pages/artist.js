@@ -3,7 +3,7 @@ import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { AuthContext } from "../contexts/authContext";
 import "../style/feed-style.css"
 
-export function Feed() {
+export function Artist() {
     const { loggedInUser } = useContext(AuthContext)
     console.log(loggedInUser)
     return ( 
