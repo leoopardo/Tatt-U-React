@@ -9,3 +9,12 @@
     top: 0px;
     background: #303030;
 }
+.AllPosts{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 400px;
+    margin-top: 20px;
+}

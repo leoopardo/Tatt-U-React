@@ -5,6 +5,7 @@ import { api } from "../api/api";
 import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { AuthContext } from "../contexts/authContext";
 import "../style/login-style.css"
+import toast, {Toaster} from "react-hot-toast";
 export function Login() {
     const [login, setLogin] = useState({
         email: "",
@@ -23,21 +24,27 @@ export function Login() {
         try {
            const response = await api.post("/user/login", login);
            setLoggedInUser({...response.data});
-
+           toast.success('Logged')
            localStorage.setItem("loggedInUser", JSON.stringify(response.data));
-        
            if(loggedInUser.user.role === "ARTIST"){
-               navigate("/artist");
+            navigate("/artist");
            } else{
-               navigate("/feed")
+            navigate("/feed")
             } 
             
         } catch (error) {
+            toast.error("Unvalid email or password")
             console.log(error);
         }
     }
     return ( 
         <div className="loginPage">
+        <div>   
+            <Toaster
+            position="top-center"
+            reverseOrder={false}
+            />
+        </div>
         <NavBarSimple><h1>Tatt U</h1></NavBarSimple>
         <div className="formBox">
             <form onSubmit={handleSubmit}>
