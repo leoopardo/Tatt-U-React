@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../style/signUp-style.css"
 import { api } from "../api/api";
+import toast, {Toaster} from "react-hot-toast";
 
 export function Signup() {
     const navigate = useNavigate()
@@ -45,14 +46,21 @@ export function Signup() {
         try{
             const imgURL = await handleUpload();
             await api.post("/user/signup", {...signUp, profilePicture: imgURL})
-            
+            toast.success('Account created :)')
             navigate("/")
         } catch(err){
+            toast.error("Account not created :(")
             console.log(err)
         }
     }
     return ( 
         <div className="loginPage">
+        <div>   
+            <Toaster
+            position="top-left"
+            reverseOrder={false}
+            />
+        </div>
             <NavBarSimple><h1>Sign up</h1></NavBarSimple>
             <div className="formBox">
                 <form onSubmit={handleSubmit}>

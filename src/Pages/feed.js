@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { AuthContext } from "../contexts/authContext";
 import { DropDownMenu } from "../components/DropDownMenu/DropDownMenu";
+import { Link } from "react-router-dom";
 import "../style/feed-style.css"
 
 export function Feed() {
@@ -13,8 +14,23 @@ export function Feed() {
 
     return ( 
         <div className="feed">
-        <NavBarSimple><img src={loggedInUser.user.profilePicture} alt="profile_pic" className="profilePic"></img>
-        <DropDownMenu></DropDownMenu>
+        <NavBarSimple>
+        <img src={loggedInUser.user.profilePicture} alt="profile_pic" className="profilePic"></img>
+        <DropDownMenu> 
+
+            <li>
+                <Link to="/search">Search new artists</Link> 
+            </li>
+            <li>
+            <hr/>
+                <Link to="/followings">Following</Link>
+            </li>
+            <li>
+            <hr/>
+                <Link to="/chat">Chat</Link>
+            </li>
+            
+        </DropDownMenu>
         </NavBarSimple>   
         </div>
      );

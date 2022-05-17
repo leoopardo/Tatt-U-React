@@ -8,6 +8,7 @@ import { Followings } from './Pages/followings';
 import { Login } from './Pages/login';
 import { SearchNewArtist } from './Pages/searchNewArtist';
 import { Signup } from './Pages/signup';
+import { NewPost } from './Pages/newPost';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/chat' element={<Chat/>} />
           <Route path='/search' element={<SearchNewArtist/>} />
           <Route path='artist' element={<Artist/>}/>
+          <Route path='/new-post' element={<NewPost/>}/>
         </Routes>
       </BrowserRouter>
     </AuthContextComponent>
