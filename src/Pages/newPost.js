@@ -12,7 +12,6 @@ export function NewPost() {
     const navigate = useNavigate()
     const {loggedInUser} = useContext(AuthContext)
     const [post, setPost] = useState({
-        userId: loggedInUser.user._id,
         desc: "",
         img: ""
     })
@@ -65,7 +64,7 @@ export function NewPost() {
         e.preventDefault();
         try{
             const imgURL = await handleUpload();
-            await api.post("/post/create", {post, img: imgURL})
+            await api.post("/post/create", {...post, img: imgURL})
             
             navigate("/artist")
         } catch(err){
