@@ -52,6 +52,7 @@ export function Signup() {
             toast.error("Account not created :(")
             console.log(err)
         }
+        navigate("/feed")
     }
     return ( 
         <div className="loginPage">

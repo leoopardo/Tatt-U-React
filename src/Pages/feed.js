@@ -4,6 +4,7 @@ import { AuthContext } from "../contexts/authContext";
 import { DropDownMenu } from "../components/DropDownMenu/DropDownMenu";
 import { Link } from "react-router-dom";
 import "../style/feed-style.css"
+import { Link } from "react-router-dom";
 
 export function Feed() {
     const { loggedInUser } = useContext(AuthContext);
