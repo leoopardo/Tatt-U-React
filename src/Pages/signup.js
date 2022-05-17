@@ -58,7 +58,7 @@ export function Signup() {
         <div className="loginPage">
         <div>   
             <Toaster
-            position="top-left"
+            position="top-center"
             reverseOrder={false}
             />
         </div>

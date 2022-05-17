@@ -77,7 +77,7 @@ export function NewPost() {
         <div className="feed">
         <div>   
             <Toaster
-            position="top-left"
+            position="top-center"
             reverseOrder={false}
             />
         </div>
