@@ -20,6 +20,8 @@ export function Artist() {
        
     }, [loggedInUser.user._id])
     console.log(allPosts)
+    
+
     return ( 
         <div className="feed">
             <NavBarSimple>
@@ -49,7 +51,9 @@ export function Artist() {
             <div className="AllPosts">
                 {allPosts.map((currentPost) => {
                     return(
-                        <PostCard 
+                        <PostCard
+                        api={api}
+                        id={currentPost._id}
                         ProfileImg={loggedInUser.user.profilePicture}
                         UserName={loggedInUser.user.name}
                         date={currentPost.createdAt}
