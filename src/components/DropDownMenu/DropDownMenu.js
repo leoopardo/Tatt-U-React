@@ -1,9 +1,8 @@
-import "../style/DropDownMenu-style.css";
+import "../../style/DropDownMenu-style.css"
 import navicon from "../../images/navicon.png";
-import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 
-export function DropDownMenu() {
+export function DropDownMenu(props) {
     const dropDpwnRef =  useRef(null);
     const [isActive, SetIsActive] = useState(false);
     const onClick = () => SetIsActive(!isActive);
@@ -17,17 +16,9 @@ export function DropDownMenu() {
                </button>
                <nav ref={dropDpwnRef}
                  className={`menu ${isActive ? "active" : "inactive"}`}>
-                   <ul className="box-ul">
-                        <li>
-                            <Link to="/search">Search new artists</Link> 
-                        </li>
-                        <li>
-                            <Link to="/followings">Following</Link>
-                        </li>
-                        <li>
-                            <Link to="/chat">Chat</Link>
-                        </li>
-                    </ul>
+                <ul className="box-ul">
+                    {props.children}
+                </ul>
                </nav>
             </div>
 
