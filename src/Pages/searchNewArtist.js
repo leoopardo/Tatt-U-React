@@ -17,11 +17,21 @@ export function SearchNewArtist() {
             <li>
                 <Link to="/feed">Feed</Link> 
             </li>
+            <hr/>
             <li>
                 <Link to="/followings">Following</Link>
             </li>
+            <hr/>
             <li>
                 <Link to="/chat">Chat</Link>
+            </li>
+            <hr/>
+            <li>
+                <Link to="/edit-profile" >Edit your Profile</Link>
+            </li>
+            <hr/>
+            <li>
+                <Link to="/" >Logout</Link>
             </li>
         </DropDownMenu>
         </NavBarSimple>  

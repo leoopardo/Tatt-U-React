@@ -25,19 +25,26 @@ export function Artist() {
             <NavBarSimple>
                 <img src={loggedInUser.user.profilePicture} alt="profile_pic" className="profilePic"></img>
                 <DropDownMenu>
-                <li>
-        
-                    <Link to="/new-post">New Post</Link> 
-                </li>
-                <li>
-                <hr/>
-                    <Link to="/chat">Chat</Link>
-                </li>
-                <li>
-                <hr/>
-                    <Link to="/schedule">schedule</Link> 
-                </li>
-                </DropDownMenu>
+            <li>
+                <Link to="/new-post">New Post</Link> 
+            </li>
+            <li>
+            <hr/>
+                <Link to="/chat">Chat</Link>
+            </li>
+            <li>
+            <hr/>
+                <Link to="/schedule">Schedule</Link> 
+            </li>
+            <hr/>
+            <li>
+                <Link to="/edit-profile" >Edit your Profile</Link>
+            </li>
+            <hr/>
+            <li>
+                <Link to="/" >Logout</Link>
+            </li>
+            </DropDownMenu>
             </NavBarSimple>
             <div className="AllPosts">
                 {allPosts.map((currentPost) => {
@@ -52,7 +59,6 @@ export function Artist() {
                     )
                 })}
             </div>
-
         </div>
      );
 }

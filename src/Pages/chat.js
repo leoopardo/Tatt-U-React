@@ -11,16 +11,20 @@ export function Chat() {
             <NavBarSimple>
                 <img src={loggedInUser.user.profilePicture} alt="profile_pic" className="profilePic"></img>
                 <DropDownMenu>
-                <li>  
-                    <Link to="/new-post">New Post</Link> 
+                <li>
+                    <Link to="/feed">Feed</Link>
                 </li>
                 <li>
                     <hr/>
-                    <Link to="/artist">Feed</Link>
+                    <Link to="/schedule">Schedule</Link> 
                 </li>
+                <hr/>
                 <li>
-                    <hr/>
-                    <Link to="/schedule">schedule</Link> 
+                    <Link to="/edit-profile" >Edit your Profile</Link>
+                </li>
+                <hr/>
+                <li>
+                    <Link to="/" >Logout</Link>
                 </li>
                 </DropDownMenu>
             </NavBarSimple>

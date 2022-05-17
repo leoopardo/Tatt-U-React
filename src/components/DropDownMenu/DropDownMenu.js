@@ -18,7 +18,7 @@ export function DropDownMenu(props) {
                  className={`menu ${isActive ? "active" : "inactive"}`}>
                    <ul className="box-ul">
                         {props.children}
-                    </ul>
+                   </ul>
                </nav>
             </div>
 

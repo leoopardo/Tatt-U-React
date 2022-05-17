@@ -19,11 +19,21 @@ export function Followings() {
             <li>
                 <Link to="/feed">Feed</Link> 
             </li>
+            <hr/>
             <li>
                 <Link to="/search">Search new artists</Link>
             </li>
+            <hr/>
             <li>
                 <Link to="/chat">Chat</Link>
+            </li>
+            <hr/>
+            <li>
+                <Link to="/edit-profile" >Edit your Profile</Link>
+            </li>
+            <hr/>
+            <li>
+                <Link to="/" >Logout</Link>
             </li>
             </DropDownMenu>
         </NavBarSimple>
