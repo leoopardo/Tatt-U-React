@@ -6,25 +6,24 @@
 .menu{
     opacity: 0;
 }
+
 .menu-container{
     margin-left: 100px;
     margin-top: 20px;
     max-width: 3000px;
-    
-    
-
 }
+
 .menu-button{
     display: flex;
     position: relative;
     justify-content: center;
     width: 100px;
+    left: 100px;
 }
 
 .nav-icon{
     width: 30px;
-    height: 25px;
-    
+    height: 25px;  
 }
 
 .menu.active ul{
@@ -39,15 +38,13 @@
     margin: 0;
     padding: 0;
     margin-top: 9px;
-    
-
 }
 
 .box-ul{
     display: flex;
     width: 90px;
     position: absolute;
-    left: 207px;
+    left: 307px;
     margin: 0;
     list-style: none;
     font-size: 19px;
@@ -55,15 +52,15 @@
     gap: 10px;
 }
 
-
-
 .box-ul li a{
     color: white;
     padding: 8px 10px;
     text-decoration: none;
     display: block;
 }
-
+hr{
+    width: 90px
+}
 
 
 

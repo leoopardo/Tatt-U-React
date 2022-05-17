@@ -1,4 +1,4 @@
-import "../../style/DropDownMenu-style.css"
+import "../../style/DropDownMenu-style.css";
 import navicon from "../../images/navicon.png";
 import { useRef, useState } from "react";
 
@@ -16,9 +16,9 @@ export function DropDownMenu(props) {
                </button>
                <nav ref={dropDpwnRef}
                  className={`menu ${isActive ? "active" : "inactive"}`}>
-                <ul className="box-ul">
-                    {props.children}
-                </ul>
+                   <ul className="box-ul">
+                        {props.children}
+                    </ul>
                </nav>
             </div>
 
