@@ -9,6 +9,7 @@ import { Login } from './Pages/login';
 import { SearchNewArtist } from './Pages/searchNewArtist';
 import { Signup } from './Pages/signup';
 import { NewPost } from './Pages/newPost';
+import { EditProfile } from './Pages/editProfile';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/search' element={<SearchNewArtist/>} />
           <Route path='artist' element={<Artist/>}/>
           <Route path='/new-post' element={<NewPost/>}/>
+          <Route path='/edit-profile' element={<EditProfile/>} />
         </Routes>
       </BrowserRouter>
     </AuthContextComponent>

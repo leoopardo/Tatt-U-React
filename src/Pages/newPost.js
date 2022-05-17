@@ -88,12 +88,20 @@ export function NewPost() {
                     <Link to="/chat">Chat</Link> 
                 </li>
                 <li>
-                    <hr/>
+                <hr/>
                     <Link to="/artist">Feed</Link>
                 </li>
                 <li>
-                    <hr/>
+                <hr/>
                     <Link to="/schedule">schedule</Link> 
+                </li>
+                <hr/>
+                 <li>
+                    <Link to="/edit-profile" >Edit your Profile</Link>
+                </li>
+                <hr/>
+                <li>
+                    <Link to="/" >Logout</Link>
                 </li>
                 </DropDownMenu>
             </NavBarSimple>

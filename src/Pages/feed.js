@@ -16,8 +16,7 @@ export function Feed() {
         <div className="feed">
         <NavBarSimple>
         <img src={loggedInUser.user.profilePicture} alt="profile_pic" className="profilePic"></img>
-        <DropDownMenu> 
-
+        <DropDownMenu>
             <li>
                 <Link to="/search">Search new artists</Link> 
             </li>
@@ -28,6 +27,18 @@ export function Feed() {
             <li>
             <hr/>
                 <Link to="/chat">Chat</Link>
+            </li>
+            <hr/>
+            <li>
+                <Link to="/schedule">Schedule</Link> 
+            </li>
+            <hr/>
+            <li>
+                <Link to="/edit-profile" >Edit your Profile</Link>
+            </li>
+            <hr/>
+            <li>
+                <Link to="/" >Logout</Link>
             </li>
             
         </DropDownMenu>
