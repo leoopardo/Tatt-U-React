@@ -9,7 +9,8 @@ import toast, {Toaster} from "react-hot-toast";
 export function Login() {
     const [login, setLogin] = useState({
         email: "",
-        password: ""
+        password: "",
+
     });
     const navigate = useNavigate()
     const {setLoggedInUser} = useContext(AuthContext)
@@ -19,6 +20,13 @@ export function Login() {
         setLogin({...login, [e.target.name]: e.target.value})
         console.log(login)
     }
+    function isArtist(){
+        if(loggedInUser.user.role === "ARTIST"){
+            navigate("/artist");
+        } else{
+            navigate("/feed")
+        }
+    }
     async function handleSubmit(e){
         e.preventDefault();
         try {
@@ -26,17 +34,15 @@ export function Login() {
            setLoggedInUser({...response.data});
            toast.success('Logged')
            localStorage.setItem("loggedInUser", JSON.stringify(response.data));
-           if(loggedInUser.user.role === "ARTIST"){
-            navigate("/artist");
-           } else{
-            navigate("/feed")
-            } 
+           setTimeout(isArtist, 1500)
+            
             
         } catch (error) {
             toast.error("Unvalid email or password")
             console.log(error);
         }
     }
+
     return ( 
         <div className="loginPage">
         <div>   

@@ -3,6 +3,7 @@ import { DropDownMenu } from "../components/DropDownMenu/DropDownMenu";
 import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { AuthContext } from "../contexts/authContext";
 import { Link } from "react-router-dom";
+import "../style/feed-style.css"
 
 
 export function Followings() {
@@ -13,7 +14,7 @@ export function Followings() {
 
 
     return ( 
-        <div className="container" >
+        <div className="feed" >
         <NavBarSimple> <img src={loggedInUser.user.profilePicture} alt="profile_pic" className="profilePic"></img>
             <DropDownMenu>
             <li>
