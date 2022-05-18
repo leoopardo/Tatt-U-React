@@ -30,19 +30,14 @@ export function Feed() {
             </li>
             <hr/>
             <li>
-                <Link to="/schedule">Schedule</Link> 
-            </li>
-            <hr/>
-            <li>
                 <Link to="/edit-profile" >Edit your Profile</Link>
             </li>
             <hr/>
             <li>
                 <Link to="/" >Logout</Link>
             </li>
-            
         </DropDownMenu>
-        </NavBarSimple>   
+        </NavBarSimple>  
         </div>
      );
 }

@@ -3,6 +3,7 @@ import { AuthContext } from "../contexts/authContext";
 import { DropDownMenu } from "../components/DropDownMenu/DropDownMenu";
 import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { Link } from "react-router-dom";
+import { SearchArtists } from "../components/SearchArtists/Search";
 //import "../style/DropDownMenu-style.css"
 
 export function SearchNewArtist() {
@@ -11,7 +12,7 @@ export function SearchNewArtist() {
 
 
     return (
-    <div className="container">
+    <div className="feed">
         <NavBarSimple><img src={loggedInUser.user.profilePicture} alt="profile_pic" className="profilePic"></img>
         <DropDownMenu>
             <li>
@@ -34,7 +35,8 @@ export function SearchNewArtist() {
                 <Link to="/" >Logout</Link>
             </li>
         </DropDownMenu>
-        </NavBarSimple>  
+        </NavBarSimple> 
+        <SearchArtists />
     </div>
     )
 }

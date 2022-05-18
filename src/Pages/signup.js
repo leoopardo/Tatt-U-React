@@ -52,7 +52,6 @@ export function Signup() {
             toast.error("Account not created :(")
             console.log(err)
         }
-        navigate("/feed")
     }
     return ( 
         <div className="loginPage">
@@ -69,6 +68,7 @@ export function Signup() {
                         <label htmlFor="role" className="labelYouAre">You Are:</label>
                     </div>
                     <select name="role" className="role" value={signUp.role} onChange={handleChange}>
+                        <option value="">SELECT</option>
                         <option value="USER">USER</option>
                         <option value="ARTIST">ARTIST</option>
                     </select>
