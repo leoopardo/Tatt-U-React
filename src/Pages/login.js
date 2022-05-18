@@ -9,7 +9,8 @@ import toast, {Toaster} from "react-hot-toast";
 export function Login() {
     const [login, setLogin] = useState({
         email: "",
-        password: ""
+        password: "",
+
     });
     const navigate = useNavigate()
     const {setLoggedInUser} = useContext(AuthContext)
@@ -41,6 +42,7 @@ export function Login() {
             console.log(error);
         }
     }
+
     return ( 
         <div className="loginPage">
         <div>   

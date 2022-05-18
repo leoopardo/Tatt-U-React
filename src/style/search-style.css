@@ -1,0 +1,10 @@
+.ArtistCardImg{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    
+}
+.AllArtist{
+    display: flex;
+    justify-content: space-between;
+}
