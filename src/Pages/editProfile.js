@@ -1,8 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../contexts/authContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { NavBarSimple } from "../components/navsBar/navBarSimple";
-import { DropDownMenu } from "../components/DropDownMenu/DropDownMenu";
 import { api } from "../api/api";
 import toast from "react-hot-toast";
 
@@ -54,6 +53,13 @@ export function EditProfile() {
             console.log(err)
         };
     }
+    function isArtist(){
+        if(loggedInUser.user.role === "ARTIST"){
+            navigate("/artist");
+        } else{
+            navigate("/feed")
+        }
+    }
     async function handleSubmit(e){
         e.preventDefault();
         try{
@@ -66,30 +72,12 @@ export function EditProfile() {
             toast.error("Account not created :(")
             console.log(err)
         }
-        navigate("/feed")
+        isArtist()
     }
     return (
         <div className="feed">
             <NavBarSimple>
                 <img src={loggedInUser.user.profilePicture} alt="profile_pic" className="profilePic" />
-                    <DropDownMenu>
-                        <li>
-                            <Link to="/feed">Feed</Link> 
-                        </li>
-                        <li>
-                        <hr/>
-                            <Link to="/chat">Chat</Link>
-                        </li>
-                        <li>
-                        <hr/>
-                            <Link to="/schedule">Schedule</Link> 
-                        </li>
-                        <hr/>
-                        <li>
-                            <Link to="/" >Logout</Link>
-                        </li>
-            
-                    </DropDownMenu>
             </NavBarSimple>
             <div className="formBox">
                 <form onSubmit={handleSubmit}>
