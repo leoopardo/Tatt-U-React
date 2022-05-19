@@ -1,10 +1,13 @@
 .ArtistCardImg{
     height: 80px;
     width: 80px;
-    border-radius: 100%;
-    
+    border-radius: 100%; 
 }
 .AllArtist{
     display: flex;
     justify-content: space-between;
+    background-color: white;
+    border: 2px solid black;
+    margin: 6px;
+    width: 400px;
 }

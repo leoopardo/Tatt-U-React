@@ -17,7 +17,7 @@ export function Artist() {
         setAllPosts(response.data)
      };
      getPosts();
-       
+    
     }, [loggedInUser.user._id])
     console.log(allPosts)
     
