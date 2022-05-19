@@ -32,8 +32,7 @@ export function PostCard(props) {
             <div className="PostHeader">
                 <img src={`${props.ProfileImg}`} alt={`${props.UserName}ProfileImage`} className="PostProfile"/>
                 <h5>{props.UserName}</h5>
-                <button onClick={HandleDelete} className="deleteButton"><img src={DeleteIcon} alt= "delete" className="deleteIcon"/></button>
-                
+                <button onClick={HandleDelete} className="deleteButton"><img src={DeleteIcon} alt= "delete" className="deleteIcon"/></button>    
             </div>
             <div>
                 <img src={`${props.PostImg}`} alt={`${props.UserName}Posts`} className="PostImage"/>
