@@ -5,6 +5,7 @@ import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { Link } from "react-router-dom";
 import { api } from "../api/api";
 import "../style/search-style.css"
+import { FollowButton } from "../components/FollowButton/followButton";
 
 
 export function SearchNewArtist() {
@@ -105,10 +106,11 @@ export function SearchNewArtist() {
                 }).map((currentArtist) =>{
                     
                     return (
-                        <article className="AllArtist">
-                            <img src={currentArtist.profilePicture} alt={currentArtist.name} className="ArtistCardImg" />
-                            <h5>{currentArtist.name}</h5>
+                        <article className="AllArtist" >
+                            <img src={currentArtist.profilePicture} alt={currentArtist.name} className="ArtistCardImg" style={{border: `5px solid ${currentArtist.online}`}} />
+                            <h2>{currentArtist.name}</h2>
                             <p>{`lives in ${currentArtist.country}, ${currentArtist.city}-${currentArtist.state}`} </p>
+                            <FollowButton _id={currentArtist._id}/>
                         </article>
                     )
                 })}
