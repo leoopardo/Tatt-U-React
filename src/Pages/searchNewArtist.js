@@ -5,12 +5,13 @@ import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { Link } from "react-router-dom";
 import { api } from "../api/api";
 import "../style/search-style.css"
-
+import { FollowButton } from "../components/FollowButton/followButton";
 
 export function SearchNewArtist() {
     const { loggedInUser } = useContext(AuthContext);
     console.log(loggedInUser)
     const [allArtists, setAllArtists] = useState([])
+    //const [follow, SetFollow] = useState([]);
     console.log(allArtists)
     const [search, setSearch] = useState({
         country: "",
@@ -29,6 +30,10 @@ export function SearchNewArtist() {
     }
     getAllArtists()
     }, [])
+
+  
+
+   
 
     function handleChange(e){
         setSearch({...search, [e.target.name]: e.target.value})
@@ -109,6 +114,7 @@ export function SearchNewArtist() {
                             <img src={currentArtist.profilePicture} alt={currentArtist.name} className="ArtistCardImg" />
                             <h5>{currentArtist.name}</h5>
                             <p>{`lives in ${currentArtist.country}, ${currentArtist.city}-${currentArtist.state}`} </p>
+                            <FollowButton _id={currentArtist._id} ></FollowButton>
                         </article>
                     )
                 })}
