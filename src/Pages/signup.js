@@ -34,7 +34,7 @@ export function Signup() {
             const uploadData = new FormData();
             uploadData.append("picture", img);
 
-            const response = await api.post("/img/upload-image", uploadData);
+            const response = await api.post("/img/img/upload-image", uploadData);
 
             return response.data.url
         } catch(err){

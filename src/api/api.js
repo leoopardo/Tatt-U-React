@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiURLs = {
-    development: "http://localhost:4000",
+    development: "https://tatt-u.herokuapp.com",
     production: "https://tatt-u.herokuapp.com",
 };
 

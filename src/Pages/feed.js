@@ -3,14 +3,24 @@ import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { AuthContext } from "../contexts/authContext";
 import { DropDownMenu } from "../components/DropDownMenu/DropDownMenu";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { api } from "../api/api";
+import { PostCard } from "../components/postCard/postCard";
 import "../style/feed-style.css"
 
 export function Feed() {
     const { loggedInUser } = useContext(AuthContext);
     console.log(loggedInUser)
+    const [user, setUser] = useState([])
 
-
-
+    useEffect(() =>{
+        async function getUser(){
+            const response = await api.get("/user/profile")
+            setUser(response.data.followings)
+        }
+        getUser()
+    }, [])
+    console.log(user)
 
     return ( 
         <div className="feed">
@@ -38,6 +48,25 @@ export function Feed() {
             </li>
         </DropDownMenu>
         </NavBarSimple>  
+        <div className="userFeed">
+            {user.map((currentUser) => {
+                return(
+                    <>
+                        
+                        {currentUser.post.sort(function(a, b){ return (new Date(b.createdAt) - new Date(a.createdAt))}).map((post) =>{
+                            return(
+                                <PostCard
+                                    ProfileImg={currentUser.profilePicture}
+                                    UserName={<Link to={`/${currentUser._id}`}>{currentUser.name}</Link>}
+                                    PostImg={post.img}
+                                    Description={post.desc}
+                                />
+                            )
+                        })}
+                    </>
+                )
+            })}
+        </div>
         </div>
      );
 }
