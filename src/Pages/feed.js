@@ -44,15 +44,14 @@ export function Feed() {
             </li>
             <hr/>
             <li>
-                <Link to="/" >Logout</Link>
+                <Link to="/">Logout</Link>
             </li>
         </DropDownMenu>
         </NavBarSimple>  
         <div className="userFeed">
             {user.map((currentUser) => {
                 return(
-                    <>
-                        
+                    <div>
                         {currentUser.post.map((post) =>{
                             return(
                                 <PostCard
@@ -63,7 +62,7 @@ export function Feed() {
                                 />
                             )
                         })}
-                    </>
+                    </div>
                 )
             })}
         </div>
