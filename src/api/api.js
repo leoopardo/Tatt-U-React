@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const apiURLs = {
-    development: "https://teste-tattoo.herokuapp.com",
-    production: "https://teste-tattoo.herokuapp.com",
+    development: "http://localhost:4000",
+    production: "http://localhost:4000",
 };
 
 
