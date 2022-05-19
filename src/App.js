@@ -21,7 +21,6 @@ function App() {
           <Route path='/' element={<Login/>}/>
           <Route path='/feed' element={<Feed/>}/>
           <Route path='/followings' element={<Followings/>} />
-          <Route path='/chat' element={<Chat/>} />
           <Route path='/search' element={<SearchNewArtist/>} />
           <Route path='artist' element={<Artist/>}/>
           <Route path='/new-post' element={<NewPost/>}/>

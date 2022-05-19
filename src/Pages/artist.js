@@ -52,14 +52,9 @@ export function Artist() {
                 {allPosts.map((currentPost) => {
                     return(
                         <PostCard
-                        api={api}
-                        id={currentPost._id}
-                        ProfileImg={loggedInUser.user.profilePicture}
-                        UserName={loggedInUser.user.name}
-                        date={currentPost.createdAt}
-                        PostImg={currentPost.img}
-                        Description={currentPost.desc}
-                        />
+                        key={currentPost._id}
+                        post={currentPost}
+ />
                     )
                 })}
             </div>
