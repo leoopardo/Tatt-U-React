@@ -53,7 +53,7 @@ export function Feed() {
                 return(
                     <>
                         
-                        {currentUser.post.sort(function(a, b){ return (new Date(b.createdAt) - new Date(a.createdAt))}).map((post) =>{
+                        {currentUser.post.map((post) =>{
                             return(
                                 <PostCard
                                     ProfileImg={currentUser.profilePicture}
