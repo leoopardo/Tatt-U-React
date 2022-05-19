@@ -5,7 +5,7 @@ import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { Link } from "react-router-dom";
 import { api } from "../api/api";
 import "../style/search-style.css"
-import { FollowButton } from "../components/FollowButton/followButton";
+import { FollowButton } from "../components/followButton/followButton";
 
 
 export function SearchNewArtist() {
