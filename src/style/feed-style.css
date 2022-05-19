@@ -4,6 +4,7 @@
     align-items: center;
     position: absolute;
     width: 414px;
+    min-height: 844px;
     left: 0px;
     top: 0px;
     background: #303030;
