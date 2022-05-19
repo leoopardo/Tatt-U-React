@@ -19,14 +19,18 @@ export function EditProfile() {
         contact: ""
     })
 
+
+
+
     useEffect(()=>{
         async function fetchUser(){
             const response = await api.patch("/user/update-user-profile");
             SetEditProfile({...response.data})
         }
-        fetchUser()
-
+        fetchUser();
+        
     },[])
+    
 
     
 
@@ -46,7 +50,7 @@ export function EditProfile() {
             const uploadData = new FormData();
             uploadData.append("picture", img);
 
-            const response = await api.post("/img/upload-image", uploadData);
+            const response = await api.post("/img/img/upload-image", uploadData);
 
             return response.data.url
         } catch(err){
@@ -64,8 +68,8 @@ export function EditProfile() {
         e.preventDefault();
         try{
             const imgURL = await handleUpload();
-            const response = await api.patch("/user/update-user-profile", editProfile);
-            SetEditProfile({...response.data, profilePicture: imgURL})            
+            const response = await api.patch("/user/update-user-profile", {...editProfile, profilePicture: imgURL });
+            SetEditProfile({...response.data})            
             toast.success('Account updated :)')
             navigate("/")
         } catch(err){
