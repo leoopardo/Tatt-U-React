@@ -61,9 +61,15 @@
 hr{
     width: 90px
 }
-
-
-
-
+@media screen and (min-width: 1000px) and (max-width: 1300px){
+    .menu-container{
+        margin-left: 60px;
+        margin-top: 20px;
+        max-width: 3000px;
+    }
+    .box-ul{
+        left: 365px;
+    }
+  }
 
 

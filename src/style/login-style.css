@@ -1,7 +1,7 @@
 .loginPage{
     position: absolute;
     background-size: cover;
-    width: 414px;
+    width: screen;
     height: 855px;
     left: 0px;
     top: 0px;
@@ -94,11 +94,11 @@
     justify-content: center;
 }
 .DontHaveAnAccout{
-    position: absolute;
+    position: relative;
     width: 220px;
     height: 18px;
-    left: 105px;
-    top: 600px;
+    left: 35px;
+    top: 450px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -106,3 +106,49 @@
     line-height: 29px;
     color: #FFC5C5;
 }
+#root{
+    height: 0px;
+}
+@media screen and (min-width: 1000px) and (max-width: 1300px){
+    .loginPage{
+        position: relative;
+        width: 360px;
+        height: 600px;
+    }
+    .formBox{
+        position: absolute;
+        width: 230px;
+        height: 400px;
+        left: 60px;
+        top: 110px;
+    }
+    .labelEmail{
+        position: absolute;
+        width: 62px;
+        height: 40px;
+        left: 80px;
+        top: 60px;
+    }
+    .inputEmail{
+        position: absolute;
+        width: 165px;
+        height: 30px;
+    }
+    .labelPassword{
+        position: absolute;
+        width: 119px;
+        height: 36px;
+        left: 55px;
+        top: 125px;
+    
+    }
+    .inputPassword{
+        position: absolute;
+        width: 165px;
+        height: 30px;
+    }
+    .loginButton{
+        position: relative;
+        left: 75px;
+    }
+  }

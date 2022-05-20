@@ -20,13 +20,7 @@ export function Login() {
         setLogin({...login, [e.target.name]: e.target.value})
         console.log(login)
     }
-    function isArtist(){
-        if(loggedInUser.user.role === "ARTIST"){
-            navigate("/artist");
-        } else{
-            navigate("/feed")
-        }
-    }
+    
     async function handleSubmit(e){
         e.preventDefault();
         try {
@@ -34,8 +28,11 @@ export function Login() {
            setLoggedInUser({...response.data});
            toast.success('Logged')
            localStorage.setItem("loggedInUser", JSON.stringify(response.data));
-            await setTimeout(isArtist, 1500)
-            
+           if(response.data.role === "ARTIST"){
+            navigate("/artist");
+        } else{
+            navigate("/feed")
+        }
             
         } catch (error) {
             toast.error("Unvalid email or password")
@@ -83,8 +80,8 @@ export function Login() {
                     </button>
                 </div>
             </form>
+            <Link to="/signup" className="DontHaveAnAccout">i dont have an account</Link>
             </div>
-        <Link to="/signup" className="DontHaveAnAccout">i dont have an account</Link>
         </div>
      );
 }
