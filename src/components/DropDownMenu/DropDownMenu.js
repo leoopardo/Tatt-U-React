@@ -2,6 +2,7 @@ import "../../style/DropDownMenu-style.css";
 import navicon from "../../images/navicon.png";
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { IsActive } from "./DropActive";
 
 export function DropDownMenu(props) {
     const dropDpwnRef =  useRef(null);
@@ -13,6 +14,15 @@ export function DropDownMenu(props) {
         navigate("/");
       }
     console.log(isActive)
+    function notActive(){
+         if( isActive === true){
+              return(<IsActive function={handleLogOut}>
+               {props.children}
+               </IsActive>)
+         } else{ 
+              return
+          }
+    }
 
     return ( 
           <div className="menu-container">
@@ -21,12 +31,7 @@ export function DropDownMenu(props) {
                </button>
                <nav ref={dropDpwnRef}
                  className={`menu ${isActive ? "active" : "inactive"}`}>
-                   <ul className="box-ul">
-                        {props.children}
-                        <li>
-                              <button onClick={handleLogOut}>Logout</button>
-                         </li>
-                   </ul>
+                   {notActive()}
                </nav>
             </div>
 
