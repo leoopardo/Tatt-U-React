@@ -19,7 +19,7 @@ export function Followings() {
         }
         getUser()
     }, [])
-    console.log(user)
+   
 
 
     return ( 
