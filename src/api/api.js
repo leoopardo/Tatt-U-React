@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const apiURLs = {
-    development: "http://localhost:4000",
-    production: "http://localhost:4000",
+    development: "https://tattuapi.herokuapp.com",
+    production: "https://tattuapi.herokuapp.com",
 };
 
 
