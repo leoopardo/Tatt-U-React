@@ -79,7 +79,7 @@ export function Login() {
                     </button>
                 </div>
             </form>
-            <Link to="/signup" className="DontHaveAnAccout">i dont have an account</Link>
+            <Link to="/signup" className="DontHaveAnAccout">I don`t have an account</Link>
             </div>
         </div>
      );
