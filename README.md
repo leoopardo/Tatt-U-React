@@ -21,8 +21,6 @@ Tatt-u é um app desenvolvido para ligar você aos melhores tatuadores da sua re
 - [Henrique Tardoqui](https://www.linkedin.com/in/henrique-tardoqui-1aa78179/)
 - [Gian Lucca](https://www.linkedin.com/in/gian-lucca-cavalini/)
 
-<div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="leonardo-araujo-" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/leonardo-araujo-?trk=profile-badge">Leonardo A.</a></div>
-
 ## Para desenvolvedores
 
 Este projeto foi inicializado com [Create React App](https://github.com/facebook/create-react-app).
@@ -50,7 +48,5 @@ Você também pode ver erros no console.
 
 [Repositório Back-end](https://github.com/GianLCavalini/Tatt-U)\
 [Apresentação](https://prezi.com/i/gvw1vgji4t_3/)
-
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
 
