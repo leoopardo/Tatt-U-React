@@ -6,16 +6,11 @@ import { Link } from "react-router-dom";
 import { api } from "../api/api";
 import "../style/search-style.css"
 import { FollowButton } from "../components/FollowButton/followButton";
-<<<<<<< HEAD
-=======
-
->>>>>>> 85116f654e26a5fd6ac7027ca88b2100f91389fe
 
 export function SearchNewArtist() {
     const { loggedInUser } = useContext(AuthContext);
     console.log(loggedInUser)
     const [allArtists, setAllArtists] = useState([])
-    //const [follow, SetFollow] = useState([]);
     console.log(allArtists)
     const [search, setSearch] = useState({
         country: "",
@@ -118,11 +113,7 @@ export function SearchNewArtist() {
                             <img src={currentArtist.profilePicture} alt={currentArtist.name} className="ArtistCardImg" style={{border: `5px solid ${currentArtist.online}`}} />
                             <h2>{currentArtist.name}</h2>
                             <p>{`lives in ${currentArtist.country}, ${currentArtist.city}-${currentArtist.state}`} </p>
-<<<<<<< HEAD
-                            <FollowButton _id={currentArtist._id} ></FollowButton>
-=======
                             <FollowButton _id={currentArtist._id}/>
->>>>>>> 85116f654e26a5fd6ac7027ca88b2100f91389fe
                         </article>
                     )
                 })}

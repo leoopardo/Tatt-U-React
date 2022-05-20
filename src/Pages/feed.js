@@ -3,25 +3,26 @@ import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { AuthContext } from "../contexts/authContext";
 import { DropDownMenu } from "../components/DropDownMenu/DropDownMenu";
 import { Link } from "react-router-dom";
-import "../style/feed-style.css"
-import { PostCard } from "../components/postCard/postCard";
 import { api } from "../api/api";
+import { PostCard } from "../components/postCard/postCard";
+import "../style/feed-style.css"
 
 
 export function Feed() {
     const { loggedInUser } = useContext(AuthContext);
     console.log(loggedInUser)
-    const [followingArtists, setFollowingArtists] = useState([])
-    useEffect(() => {
-        async function fetchFollowings(){
-           const response = await api.get(`/user/following-artists`)
-           setFollowingArtists(response.data)
-        };
-        fetchFollowings();
-       }, [loggedInUser.user.followings]);
-       console.log(followingArtists)
-    return (
-        <div>
+    const [user, setUser] = useState([])
+
+    useEffect(() =>{
+        async function getUser(){
+            const response = await api.get("/user/profile")
+            setUser(response.data.followings)
+        }
+        getUser()
+    }, [])
+    console.log(user)
+
+    return ( 
         <div className="feed">
         <NavBarSimple>
         <img src={loggedInUser.user.profilePicture} alt="profile_pic" className="profilePic"></img>
@@ -39,33 +40,30 @@ export function Feed() {
             </li>
             <hr/>
             <li>
-                <Link to="/schedule">Schedule</Link>
-            </li>
-            <hr/>
-            <li>
                 <Link to="/edit-profile" >Edit your Profile</Link>
             </li>
             <hr/>
             <li>
-                <Link to="/" >Logout</Link>
+                <Link to="/">Logout</Link>
             </li>
         </DropDownMenu>
-        </NavBarSimple>
-        </div>
-        <div>
-        {followingArtists.map((c) => {
-                return (
+        </NavBarSimple>  
+        <div className="userFeed">
+            {user.map((currentUser) => {
+                return(
                     <div>
-                    {c.followings.map((currentPost) => {
-                        return (
-                            <PostCard
-                        key={currentPost._id}
-                        post={currentPost}
-                        />
-                        );
-                    })}
+                        {currentUser.post.map((post) =>{
+                            return(
+                                <PostCard
+                                    ProfileImg={currentUser.profilePicture}
+                                    UserName={<Link to={`/${currentUser._id}`}>{currentUser.name}</Link>}
+                                    PostImg={post.img}
+                                    Description={post.desc}
+                                />
+                            )
+                        })}
                     </div>
-                );
+                )
             })}
         </div>
         </div>

@@ -49,7 +49,7 @@ export function NewPost() {
             const uploadData = new FormData();
             uploadData.append("picture", image);
 
-            const response = await api.post("/img/upload-image", uploadData);
+            const response = await api.post("/img/img/upload-image", uploadData);
             console.log(post)
             toast.success('Posted!')
             return response.data.url
@@ -90,10 +90,6 @@ export function NewPost() {
                 <li>
                 <hr/>
                     <Link to="/artist">Feed</Link>
-                </li>
-                <li>
-                <hr/>
-                    <Link to="/schedule">schedule</Link> 
                 </li>
                 <hr/>
                  <li>

@@ -14,10 +14,6 @@ export function Chat() {
                 <li>
                     <Link to="/feed">Feed</Link>
                 </li>
-                <li>
-                    <hr/>
-                    <Link to="/schedule">Schedule</Link> 
-                </li>
                 <hr/>
                 <li>
                     <Link to="/edit-profile" >Edit your Profile</Link>

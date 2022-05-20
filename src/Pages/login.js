@@ -34,7 +34,7 @@ export function Login() {
            setLoggedInUser({...response.data});
            toast.success('Logged')
            localStorage.setItem("loggedInUser", JSON.stringify(response.data));
-           setTimeout(isArtist, 1500)
+           navigate("/artist")
             
             
         } catch (error) {

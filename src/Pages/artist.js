@@ -34,10 +34,6 @@ export function Artist() {
             <hr/>
                 <Link to="/chat">Chat</Link>
             </li>
-            <li>
-            <hr/>
-                <Link to="/schedule">Schedule</Link> 
-            </li>
             <hr/>
             <li>
                 <Link to="/edit-profile" >Edit your Profile</Link>
