@@ -42,29 +42,6 @@ Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo em seu na
 A página será recarregada quando você fizer alterações.\
 Você também pode ver erros no console.
 
-## Links
-
-[Clique aqui e visite a Lugile Store](## Para desenvolvedores
-
-Este projeto foi inicializado com [Create React App](https://github.com/facebook/create-react-app).
-
-**Comandos disponíveis**
-
-No terminal de seu diretório digite os seguintes comandos:
-
-**`npm install`**
-
-Responsável por instalar todas as dependências e rodar o app em sua máquina.
-
-**`npm start`**
-
-
-Executa o aplicativo no modo de desenvolvimento.\
-Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo em seu navegador.
-
-
-A página será recarregada quando você fizer alterações.\
-Você também pode ver erros no console.
 
 ## Links
 
