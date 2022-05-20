@@ -1,5 +1,4 @@
 import { api } from "../../api/api";
-
 export function FollowButton(props) {
         async function handleFollow(){
             try{
