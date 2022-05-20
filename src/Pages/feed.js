@@ -44,16 +44,15 @@ export function Feed() {
             </li>
             <hr/>
             <li>
-                <Link to="/" >Logout</Link>
+                <Link to="/">Logout</Link>
             </li>
         </DropDownMenu>
         </NavBarSimple>  
         <div className="userFeed">
             {user.map((currentUser) => {
                 return(
-                    <>
-                        
-                        {currentUser.post.sort(function(a, b){ return (new Date(b.createdAt) - new Date(a.createdAt))}).map((post) =>{
+                    <div>
+                        {currentUser.post.map((post) =>{
                             return(
                                 <PostCard
                                     ProfileImg={currentUser.profilePicture}
@@ -63,7 +62,7 @@ export function Feed() {
                                 />
                             )
                         })}
-                    </>
+                    </div>
                 )
             })}
         </div>
