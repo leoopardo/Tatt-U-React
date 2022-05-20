@@ -14,7 +14,7 @@ export function Login() {
     });
     const navigate = useNavigate()
     const {setLoggedInUser} = useContext(AuthContext)
-    const { loggedInUser } = useContext(AuthContext)
+    
 
     function handleChange(e){
         setLogin({...login, [e.target.name]: e.target.value})
