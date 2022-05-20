@@ -9,7 +9,7 @@ import { api } from "../api/api";
 
 export function Followings() {
     const { loggedInUser } = useContext(AuthContext);
-    console.log(loggedInUser);;
+
     const [user, setUser] = useState([])
 
     useEffect(() =>{
