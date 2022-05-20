@@ -1,0 +1,72 @@
+.form-forum{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    
+}
+.post-button{
+    width: 50px;
+    margin-left: 170px;
+    margin-top: 10px;
+    background-color: #215f09;
+    color: #FFFFFF;
+}
+.text-div{
+    margin-bottom: 10px;
+    font-family:'Trebuchet MS';
+    color: #FFFFFF;
+}
+.image-div{
+    color: #FFFFFF;
+}
+
+.input-text{
+    height: 50px;
+    width: 260px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.first-hr{
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+.message-div {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    
+    
+    margin-left: 30px;
+}
+.message-container{
+    padding: 15px;
+    background: #FFFFFF;
+    border: 5px solid #000000;
+    border-radius: 25px;
+    margin-left: 2px;
+    margin-top:5px;
+}
+
+.message-image{
+    width: 155px;
+    height: 150px;
+    border-radius: 16px;
+}
+.message-text {
+    font-family: "Comic Sans MS";
+    font-size: small;
+}
+.message-button{
+    background-color: rgb(250, 101, 101);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 8px;
+}

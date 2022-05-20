@@ -5,14 +5,14 @@ import { NavBarSimple } from "../components/navsBar/navBarSimple";
 import { Link } from "react-router-dom";
 import { api } from "../api/api";
 import "../style/search-style.css"
-import { FollowButton } from "../components/followButton/followButton";
+import { FollowButton } from "../components/FollowButton/followButton";
 
 
 export function SearchNewArtist() {
     const { loggedInUser } = useContext(AuthContext);
     console.log(loggedInUser)
     const [allArtists, setAllArtists] = useState([])
-    console.log(allArtists)
+    
     const [search, setSearch] = useState({
         country: "",
         city: "",

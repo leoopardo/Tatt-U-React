@@ -1,20 +1,19 @@
 import { useContext } from "react";
-import { AuthContext } from "../contexts/authContext";
+import { AuthContext } from "../../contexts/authContext";
 import { useState, useEffect } from "react";
-import { api } from "../api/api";
+import { api } from "../../api/api";
 import toast, { Toaster } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
-import { NavBarSimple } from "../components/navsBar/navBarSimple";
-import { DropDownMenu } from "../components/DropDownMenu/DropDownMenu";
+import { NavBarSimple } from "../navsBar/navBarSimple";
+import { DropDownMenu } from "../DropDownMenu/DropDownMenu";
 import { useParams} from "react-router-dom"
-import "../style/chat.style.css"
 
 
-function Chat() {
+
+function NewMessageForm() {
 const {userId} = useParams();
-    
+
     const { loggedInUser } = useContext(AuthContext);
-    const navigate = useNavigate()
     const [addNewMessage, setAddNewMessage] = useState({
         text: "",
         messageImg: "",
@@ -41,12 +40,11 @@ const {userId} = useParams();
         e.preventDefault();
         try {
             const imgURL = await handleUpload();
-            await api.post(`/chat/${userId}`, {
+            await api.post(`/chat/${id}`, {
                 ...addNewMessage,
                 messageImg: imgURL,
             });
             toast.success("Message created :)");
-            navigate(`/chat/${userId}`)
         } catch (err) {
             toast.error("Message not created :(");
             console.log(err);
@@ -65,10 +63,8 @@ const {userId} = useParams();
         getMessages();
     }, [userId]);
     return (
-        <div className="feed">
         <div className="messages-div">
-            <div className="message-feed">
-            <div>
+            <div className="feed">
                 <NavBarSimple>
                     <img
                         src={loggedInUser.user.profilePicture}
@@ -93,11 +89,21 @@ const {userId} = useParams();
                         </li>
                     </DropDownMenu>
                 </NavBarSimple>
-                </div>  
+                <div>
+                    {messages.map((c) => {
+                        return(
+                            <div>
+                                {c.text}
+                                {c.messageImg}
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
             <form onSubmit={handleSubmit} className="form-forum">
-                <div className="text-div">
+                <div className="name-div">
                     <label htmlFor="text" className="">
-                        <strong>Message: </strong>
+                        <strong>Text: </strong>
                     </label>
                     <input
                         type="text"
@@ -114,7 +120,7 @@ const {userId} = useParams();
                     </label>
                     <input
                         type="file"
-                        className="input-image"
+                        className="input-email"
                         id="messageImg"
                         name="messageImg"
                         value={addNewMessage.messageImg}
@@ -125,22 +131,18 @@ const {userId} = useParams();
                     Send!
                 </button>
             </form>
-            <hr className="first-hr"></hr>
-            <div className="message-div">
-                    {messages.map((c) => {
-                        return(
-                            <div className="message-container">
-                               <p className="message-text"><strong>{c.text}</strong></p>
-                               <hr></hr>
-                                <img className="message-image" src={c.messageImg} alt=""></img>
-                                <button className="message-button">Delete</button>
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-        </div>
         </div>
     );
 }
-export default Chat;
+export default NewMessageForm;
+
+
+
+
+
+
+
+
+
+
+
