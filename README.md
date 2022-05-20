@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Tatt-U(Front-end)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+**Sobre:**
+Tatt-u é um app desenvolvido para ligar você aos melhores tatuadores da sua região! Siga novos artistas, acompanhe de perto seu trabalho e faça uma nova tatuuu! Além da experiêcia do usuário, Tatt-u também engaja os artistas que tem seu perfil dentro do app. 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Tecnologias Usadas:** \
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![](https://camo.githubusercontent.com/268ac512e333b69600eb9773a8f80b7a251f4d6149642a50a551d4798183d621/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d3230323332413f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d363144414642)
+![](https://camo.githubusercontent.com/3a0f693cfa032ea4404e8e02d485599bd0d192282b921026e89d271aaa3d7565/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f435353332d3135373242363f7374796c653d666f722d7468652d6261646765266c6f676f3d63737333266c6f676f436f6c6f723d7768697465)
+![](https://camo.githubusercontent.com/d63d473e728e20a286d22bb2226a7bf45a2b9ac6c72c59c0e61e9730bfe4168c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f48544d4c352d4533344632363f7374796c653d666f722d7468652d6261646765266c6f676f3d68746d6c35266c6f676f436f6c6f723d7768697465)
+![Node.JS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.JS](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Criado e desenvolvido por:**
+- [Leonardo Araujo](https://www.linkedin.com/in/leonardo-araujo-/)
+- [Henrique Tardoqui](https://www.linkedin.com/in/henrique-tardoqui-1aa78179/)
+- [Gian Lucca](https://www.linkedin.com/in/gian-lucca-cavalini/)
 
-### `npm test`
+## Para desenvolvedores
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Este projeto foi inicializado com [Create React App](https://github.com/facebook/create-react-app).
 
-### `npm run build`
+**Comandos disponíveis**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+No terminal de seu diretório digite os seguintes comandos:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**`npm install`**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Responsável por instalar todas as dependências e rodar o app em sua máquina.
 
-### `npm run eject`
+**`npm start`**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Executa o aplicativo no modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo em seu navegador.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+A página será recarregada quando você fizer alterações.\
+Você também pode ver erros no console.
 
-## Learn More
+## Links
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Clique aqui e visite a Lugile Store](## Para desenvolvedores
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Este projeto foi inicializado com [Create React App](https://github.com/facebook/create-react-app).
 
-### Code Splitting
+**Comandos disponíveis**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+No terminal de seu diretório digite os seguintes comandos:
 
-### Analyzing the Bundle Size
+**`npm install`**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Responsável por instalar todas as dependências e rodar o app em sua máquina.
 
-### Making a Progressive Web App
+**`npm start`**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+Executa o aplicativo no modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo em seu navegador.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+A página será recarregada quando você fizer alterações.\
+Você também pode ver erros no console.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Links
 
-### `npm run build` fails to minify
+[Repositório Back-end](https://github.com/GianLCavalini/Tatt-U)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
