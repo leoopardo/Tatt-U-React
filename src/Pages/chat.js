@@ -10,7 +10,7 @@ import { useParams} from "react-router-dom"
 import "../style/chat.style.css"
 
 
-function Chat() {
+export function Chat() {
 const {userId} = useParams();
     
     const { loggedInUser } = useContext(AuthContext);
@@ -66,6 +66,12 @@ const {userId} = useParams();
     }, [userId]);
     return (
         <div className="feed">
+        <div>   
+            <Toaster
+            position="top-center"
+            reverseOrder={false}
+            />
+        </div>
         <div className="messages-div">
             <div className="message-feed">
             <div>
@@ -88,9 +94,6 @@ const {userId} = useParams();
                             <Link to="/edit-profile">Edit your Profile</Link>
                         </li>
                         <hr />
-                        <li>
-                            <Link to="/">Logout</Link>
-                        </li>
                     </DropDownMenu>
                 </NavBarSimple>
                 </div>  

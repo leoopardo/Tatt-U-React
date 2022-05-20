@@ -43,9 +43,7 @@ export function Artist() {
                 <Link to="/edit-profile" >Edit your Profile</Link>
             </li>
             <hr/>
-            <li>
-                <Link to="/" >Logout</Link>
-            </li>
+            
             </DropDownMenu>
             </NavBarSimple>
             <div className="AllPosts">

@@ -42,18 +42,20 @@ export function Followings() {
                 <Link to="/edit-profile" >Edit your Profile</Link>
             </li>
             <hr/>
-            <li>
-                <Link to="/" >Logout</Link>
-            </li>
             </DropDownMenu>
         </NavBarSimple>
             <div>
                 {user.map((currentArtist) =>{
                     return(
-                        <article className="AllArtist">
-                            <img src={currentArtist.profilePicture} alt={currentArtist.name} className="ArtistCardImg" />
-                            <h5>{currentArtist.name}</h5>
-                            <p>{`lives in ${currentArtist.country}, ${currentArtist.city}-${currentArtist.state}`} </p>
+                        <article className="AllArtist" >
+                            <div className="imageDiv">
+                                <img src={currentArtist.profilePicture} alt={currentArtist.name} className="ArtistCardImg" style={{border: `5px solid ${currentArtist.online}`}} />
+                            </div>
+                            <div className="nameDiv">
+                                <Link to={`/${currentArtist._id}`} style={{textDecoration: "none", color: "#303030"}}><h2>{currentArtist.name}</h2></Link>
+                            </div>
+
+                            <p className="address">{`lives in ${currentArtist.country}, ${currentArtist.city}-${currentArtist.state}`} </p>
                         </article>
                     )
                 })}
