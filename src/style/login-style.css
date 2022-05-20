@@ -140,7 +140,6 @@
         height: 36px;
         left: 55px;
         top: 125px;
-    
     }
     .inputPassword{
         position: absolute;
@@ -150,5 +149,13 @@
     .loginButton{
         position: relative;
         left: 75px;
+    }
+    .DontHaveAnAccout{
+        position: relative;
+        width: 220px;
+        height: 18px;
+        left: 6px;
+        top: 330px;
+        font-weight: 400;
     }
   }
