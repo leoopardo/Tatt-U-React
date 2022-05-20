@@ -45,5 +45,7 @@ Você também pode ver erros no console.
 
 ## Links
 
-[Repositório Back-end](https://github.com/GianLCavalini/Tatt-U)
+[Repositório Back-end](https://github.com/GianLCavalini/Tatt-U)\
+[Apresentação](https://prezi.com/i/gvw1vgji4t_3/)
+
 
