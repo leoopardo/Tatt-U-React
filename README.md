@@ -16,6 +16,7 @@ Tatt-u é um app desenvolvido para ligar você aos melhores tatuadores da sua re
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
 **Criado e desenvolvido por:**
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 - [Leonardo Araujo](https://www.linkedin.com/in/leonardo-araujo-/)    
 - [Henrique Tardoqui](https://www.linkedin.com/in/henrique-tardoqui-1aa78179/)
 - [Gian Lucca](https://www.linkedin.com/in/gian-lucca-cavalini/)
