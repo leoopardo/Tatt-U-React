@@ -1,7 +1,10 @@
 # Tatt-U(Front-end)
 **Acesse**:
 
+
+<p align= "center">
 <a href="https://tattuapp.netlify.app/"><img width="200" src="https://i.pinimg.com/originals/2a/98/1d/2a981dc9a28ecf3339397b9d161258fc.png" /></a>
+</p>
 
 **Sobre:**
 Tatt-u é um app desenvolvido para ligar você aos melhores tatuadores da sua região! Siga novos artistas, acompanhe de perto seu trabalho e faça uma nova tatuuu! Além da experiêcia do usuário, Tatt-u também engaja os artistas que tem seu perfil dentro do app. 
@@ -48,6 +51,7 @@ Você também pode ver erros no console.
 ## Links
 
 [Repositório Back-end](https://github.com/GianLCavalini/Tatt-U)\
-[Apresentação](https://prezi.com/i/gvw1vgji4t_3/)
+[Apresentação](https://prezi.com/i/gvw1vgji4t_3/)\
+[Visite nosso app aqui!](https://tattuapp.netlify.app/)
 
 
