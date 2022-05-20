@@ -96,9 +96,6 @@ export function NewPost() {
                     <Link to="/edit-profile" >Edit your Profile</Link>
                 </li>
                 <hr/>
-                <li>
-                    <Link to="/" >Logout</Link>
-                </li>
                 </DropDownMenu>
             </NavBarSimple>
             <div className="formPost">
@@ -118,11 +115,12 @@ export function NewPost() {
                         <input 
                         type="text"
                         name="desc"
+                        className="descInput"
                         value={post.desc}
                         onChange={handleChange}
                         />
                     </div>
-                    <button type="submit">Post!</button>
+                    <button type="submit" className="postButton">Post!</button>
                 </form>
             </div>
         </div>

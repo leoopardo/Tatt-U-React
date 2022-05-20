@@ -4,6 +4,7 @@
     align-items: center;
     position: absolute;
     width: 414px;
+    min-height: 844px;
     left: 0px;
     top: 0px;
     background: #303030;
@@ -24,3 +25,21 @@
     align-items: center;
     margin: 5px;
 }
+@media screen and (min-width: 1000px) and (max-width: 1300px){
+    .feed{
+        position: relative;
+        width: 360px;
+        min-height: 600px;
+    }
+    .AllPosts{
+        width: 360px;
+    }
+    .userFeed{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        width: 400px;
+    }
+  }

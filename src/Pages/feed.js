@@ -10,7 +10,7 @@ import "../style/feed-style.css"
 
 export function Feed() {
     const { loggedInUser } = useContext(AuthContext);
-    console.log(loggedInUser)
+
     const [user, setUser] = useState([])
 
     useEffect(() =>{
@@ -43,9 +43,6 @@ export function Feed() {
                 <Link to="/edit-profile" >Edit your Profile</Link>
             </li>
             <hr/>
-            <li>
-                <Link to="/">Logout</Link>
-            </li>
         </DropDownMenu>
         </NavBarSimple>  
         <div className="userFeed">
@@ -56,7 +53,7 @@ export function Feed() {
                             return(
                                 <PostCard
                                     ProfileImg={currentUser.profilePicture}
-                                    UserName={<Link to={`/${currentUser._id}`}>{currentUser.name}</Link>}
+                                    UserName={<Link to={`/chat/${currentUser._id}`}>{currentUser.name}</Link>}
                                     PostImg={post.img}
                                     Description={post.desc}
                                 />

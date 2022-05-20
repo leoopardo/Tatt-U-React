@@ -1,7 +1,7 @@
 .ArtistCardImg{
     height: 80px;
     width: 80px;
-    border-radius: 100%; 
+    
 }
 .AllArtist{
     display: flex;
@@ -11,3 +11,29 @@
     margin: 6px;
     width: 400px;
 }
+.imageDiv{
+    min-width: 80px;
+    background-color: #303030;
+}
+.nameDiv{
+    min-width: 100px;
+}
+.address{
+    width: 100px;
+    
+}
+@media screen and (min-width: 1000px) and (max-width: 1300px){
+    .AllArtist{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        border: 2px solid black;
+        margin: 6px;
+        width: 350px;
+    }
+    .address{
+        width: 90px;
+    }
+    
+  }

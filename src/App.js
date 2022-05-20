@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { AuthContextComponent } from './contexts/authContext';
-import { Chat } from './Pages/chat';
+import  Chat  from './Pages/chat';
 import { Artist } from './Pages/artist';
 import { Feed } from './Pages/feed';
 import { Followings } from './Pages/followings';
@@ -21,7 +21,7 @@ function App() {
           <Route path='/' element={<Login/>}/>
           <Route path='/feed' element={<Feed/>}/>
           <Route path='/followings' element={<Followings/>} />
-          <Route path='/chat' element={<Chat/>} />
+          <Route path='/chat/:userId' element={<Chat/>} />
           <Route path='/search' element={<SearchNewArtist/>} />
           <Route path='artist' element={<Artist/>}/>
           <Route path='/new-post' element={<NewPost/>}/>
