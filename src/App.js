@@ -10,6 +10,7 @@ import { SearchNewArtist } from './Pages/searchNewArtist';
 import { Signup } from './Pages/signup';
 import { NewPost } from './Pages/newPost';
 import { EditProfile } from './Pages/editProfile';
+import { Schedule } from './Pages/schedule';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/followings' element={<Followings/>} />
           <Route path='/chat/:userId' element={<Chat/>} />
           <Route path='/search' element={<SearchNewArtist/>} />
+          <Route path='/schedule' element={<Schedule/>}/>
           <Route path='artist' element={<Artist/>}/>
           <Route path='/new-post' element={<NewPost/>}/>
           <Route path='/edit-profile' element={<EditProfile/>} />
